@@ -36,6 +36,7 @@ Plugin 'Vimjas/vim-python-pep8-indent'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'whatyouhide/vim-gotham'
+Plugin 'prettier/vim-prettier'
 
 if !has('win32')
     Plugin 'mileszs/ack.vim'
@@ -60,7 +61,14 @@ let g:airline#extensions#tabline#formatter = 'default'
 let g:airline_theme='gotham256'
 let g:gotham_airline_emphasised_insert = 0
 
+" Prettier format (before save)
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
+let g:prettier#config#bracket_spacing = 'true'
+let g:prettier#config#jsx_bracket_same_line = 'false'
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 
 " Colorscheme
 colorscheme gotham256
 syntax enable
+
