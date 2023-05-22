@@ -31,6 +31,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'preservim/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'Vimjas/vim-python-pep8-indent'
 Plugin 'jiangmiao/auto-pairs'
@@ -58,7 +59,7 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 " Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
-let g:airline_theme='gotham256'
+let g:airline_theme='kolor'
 let g:gotham_airline_emphasised_insert = 0
 
 " Prettier format (before save)
